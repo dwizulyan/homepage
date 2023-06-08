@@ -4,11 +4,9 @@ export default function TexasDialogue() {
   const hour = getHours();
   if (hour >= 1 && hour < 12) {
     dialogue.push("Good Morning, Lian");
-  }
-  if (hour >= 12 && hour < 15) {
+  } else if (hour >= 12 && hour < 20) {
     dialogue.push("Good Afternoon, Lian");
-  }
-  if (hour >= 15 && hour < 20) {
+  } else {
     dialogue.push("Good Night, Lian");
   }
   dialogue.push("I'am Texas, Your assitant");
