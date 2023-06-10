@@ -22,13 +22,17 @@
 @keyframes search-box-entrance{
   0%{
     right:-100%;
-    transform: perspective(900px) rotateY(0deg);
+    transform: perspective(2500px) rotateY(0deg);
   }
   100%{
     right: 0;
-    transform: perspective(900px) rotateY(-20deg);
+    transform: perspective(2500px) rotateY(-20deg);
   }
 }
+
+
+
+
 
 @keyframes texas-entrance {
   0%{
