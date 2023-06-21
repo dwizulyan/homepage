@@ -1,16 +1,16 @@
 import Loading from "./components/partial/Loading";
-import MainContent from "./components/partial/MainContent";
-
-import { useState } from "react";
-
+import { Suspense, lazy } from "react";
+const MainContent = lazy(() => import("./components/partial/MainContent"));
 import "./App.css";
 
 function App() {
-  const [loading, setLoading] = useState(true);
-  setInterval(() => {
-    setLoading(false);
-  }, 1500);
-  return <>{loading ? <Loading /> : <MainContent />}</>;
+  return (
+    <>
+      <Suspense fallback={<Loading />}>
+        <MainContent />
+      </Suspense>
+    </>
+  );
 }
 
 export default App;
