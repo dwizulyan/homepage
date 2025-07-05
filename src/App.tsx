@@ -61,7 +61,7 @@ const App: FC = () => {
                 handleSearch(e.target.value);
               }}
               placeholder="Search Someting"
-              className="w-[100%] search-bar"
+              className="w-[100%] search-bar transition-all"
             />
             <Button
               variant="default"
@@ -109,7 +109,7 @@ const App: FC = () => {
 const CustomCard: FC<ICard> = ({ description, className, title, url }) => {
   return (
     <a href={url}>
-      <Card className={cn("w-[250px] h-[150px]", className)}>
+      <Card className={cn("w-[250px] h-[150px]  transition-all", className)}>
         <CardHeader>
           <CardTitle className="text-primary">{title}</CardTitle>
           <CardDescription>{description}</CardDescription>
