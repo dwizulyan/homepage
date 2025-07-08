@@ -3,8 +3,6 @@ import { useTitle } from "@/hooks/use-title";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import Clock from "@/components/ui/clock";
-import Day from "./components/ui/day";
 import { Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { ICard } from "@/utils/types/card";
