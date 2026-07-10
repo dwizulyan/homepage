@@ -54,8 +54,7 @@ const App: FC = () => {
       <div className="flex w-full h-screen flex-col items-center justify-center">
         <div className="flex flex-col items-end">
           <div className="flex">
-            <img src="/logo.svg" className="h-[96px]" />
-            <h1 className="text-primary text-8xl font-black mb-5">OMEPAGE</h1>
+            <h1 className="text-primary text-8xl font-black mb-5">HOMEPAGE</h1>
           </div>
         </div>
         <div className="flex gap-3 items-center w-[50%] flex-col">
@@ -73,7 +72,11 @@ const App: FC = () => {
                 size="icon"
                 onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
                   e.preventDefault();
-                  window.location.href = baseSearchURL;
+                  if (search?.includes(".") && !search.includes(" ")) {
+                    window.location.href = `https://${search}`;
+                  } else {
+                    window.location.href = baseSearchURL;
+                  }
                 }}
               >
                 <Search />

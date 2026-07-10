@@ -6,9 +6,8 @@ const Navbar: FC = () => {
   return (
     <nav className="p-5 fixed flex justify-between top-0 left-0 w-full">
       <div></div>
-      <div className="flex gap-3 items-center">
+      <div className="flex flex-col gap-1 items-end">
         <Day />
-        <span className="font-black text-foreground">//</span>
         <Clock />
       </div>
     </nav>

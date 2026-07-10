@@ -9,7 +9,7 @@ const Day: FC = () => {
   return (
     <div className="">
       <h1 className="font-bold text-sm text-primary">
-        {convertDay(day)}, {tanggal} {getNamaBulan(bulan)} {year}
+        {convertDay(day - 1)}, {tanggal} {getNamaBulan(bulan)} {year}
       </h1>
     </div>
   );
